@@ -1,22 +1,10 @@
-buildscript {
-    ext {
-        springBootVersion = '1.4.0.RELEASE'
-    }
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
-    }
-}
-
 apply plugin: 'groovy'
 apply plugin: 'java'
 
 
 dependencies {
     compile localGroovy(), gradleApi()
-    compile "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+    compile "org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE"
 
     testCompile 'org.assertj:assertj-core:3.5.2'
     testCompile 'junit:junit:4.12'
