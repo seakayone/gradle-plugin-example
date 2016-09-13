@@ -4,7 +4,8 @@ apply plugin: 'java'
 
 dependencies {
     compile localGroovy(), gradleApi()
-    
+
+    testCompile 'org.assertj:assertj-core:3.5.2'
     testCompile 'junit:junit:4.12'
 }
 
