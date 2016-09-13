@@ -33,4 +33,12 @@ public class FooPluginTest {
         assertThat(fooTask instanceof FooTask).isTrue();
     }
 
+
+    @Test
+    public void spring_boot_plugin_was_applied() {
+        AppliedPlugin springBoot = project.getPluginManager().findPlugin("spring-boot");
+
+        assertThat(springBoot).isNotNull();
+    }
+
 }
