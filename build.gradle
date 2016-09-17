@@ -1,13 +1,13 @@
 apply plugin: 'groovy'
-apply plugin: 'java'
-
+apply plugin: 'java-gradle-plugin'
 
 dependencies {
-    compile localGroovy(), gradleApi()
+    compile localGroovy()
     compile "org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE"
 
     testCompile 'org.assertj:assertj-core:3.5.2'
     testCompile 'junit:junit:4.12'
+    testCompile gradleTestKit()
 }
 
 repositories {
@@ -15,4 +15,4 @@ repositories {
     mavenCentral()
 }
 
-wrapper.gradleVersion='2.14.1'
+wrapper.gradleVersion='3.0'
